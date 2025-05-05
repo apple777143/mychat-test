@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyTalk</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>MyTalk</h1>
+      <button onclick="logout()">로그아웃</button>
+    </header>
+    <main>
+      <div id="messages" class="chat-box"></div>
+      <input type="file" id="fileInput" multiple />
+      <input type="text" id="messageInput" placeholder="메시지 입력..." />
+      <button onclick="sendMessage()">전송</button>
+    </main>
+  </div>
+  <div id="lightbox"><img id="lightbox-img" /></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.5/dist/umd/supabase.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-database-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

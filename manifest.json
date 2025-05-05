@@ -1,0 +1,9 @@
+{
+  "name": "MyTalk",
+  "short_name": "MyTalk",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "카카오톡 스타일 PWA 채팅앱",
+  "icons": []
+}
