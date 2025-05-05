@@ -21,10 +21,14 @@ const fileInput = document.getElementById("fileInput");
 
 function generateSafeFilePath(file) {
   const safeFileName = encodeURIComponent(
-    file.name.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, "_").replace(/[^\w.-]/g, "")
+    file.name.normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, "_")
+      .replace(/[^\w.-]/g, "")
   );
-  return \`\${Date.now()}_\${safeFileName}\`;
+  return `${Date.now()}_${safeFileName}`;
 }
+
 
 function sendMessage() {
   const text = messageInput.value;
